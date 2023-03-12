@@ -45,7 +45,7 @@
 
     - name: Printing that register output
       ansible.builtin.debug:
-       msg:"{{out}}"
+       msg: "{{out}}"
 
 #    - name: Declaring external variable data
 #      ansible.builtin.set_fact:
