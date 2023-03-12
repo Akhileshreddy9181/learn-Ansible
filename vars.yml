@@ -36,3 +36,19 @@
       ansible.builtin.debug:
         msg: demo_var2={{ demo_var2}}
 
+- name: Register a variable
+  hosts: localhost
+  tasks:
+    - name: Get uptime output by storing it in register
+      ansible.builtin.shell: uptime
+      register: out
+
+    - name: Printing that register output
+      ansible.builtin.debug:
+       msg:"{{out}}"
+
+    - name: Declaring external variable data
+      ansible.builtin.set_fact:
+        status: "{{out.rc}}"
+
+
