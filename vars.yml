@@ -6,7 +6,7 @@
   tasks:
     - name: Print sample variable
       ansible.builtin.debug:
-       msg: demo_var={{ demo_var}}
+       msg: demo_var_ss={{ demo_var}}
 
 
 ## Loading Variables from files
