@@ -1,3 +1,4 @@
+## Variables at Play level
 - name: Play Variables
   hosts: localhost
   vars:
@@ -7,11 +8,31 @@
       ansible.builtin.debug:
        msg: demo_var={{ demo_var}}
 
+
+## Loading Variables from files
 - name: Play Variables from file
   hosts: localhost
-  vars_files:
+  vars_files: ##vars_files works only on play level
     - variables.yml
   tasks:
     - name: Printing vars from file
       ansible.builtin.debug:
        msg: file_var={{demo_var_f}}
+
+
+## Variables at Task level
+- name: Play Variables at Task level
+  hosts: localhost
+  tasks:
+    - name: Print sample task level variable1
+      vars:
+        demo_var1: first_sample_variable_at_task_level
+      ansible.builtin.debug:
+        msg: demo_var1={{ demo_var1}}
+
+    - name: Print sample task level variable2
+      vars:
+        demo_var2: second_sample_variable_at_task_level
+      ansible.builtin.debug:
+        msg: demo_var2={{ demo_var2}}
+
