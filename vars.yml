@@ -34,5 +34,5 @@
       vars:
         demo_var2: second_sample_variable_at_task_level
       ansible.builtin.debug:
-        msg: demo_var2={{ demo_var2}}
+        msg: demo_var2={{ demo_var1}}
 
