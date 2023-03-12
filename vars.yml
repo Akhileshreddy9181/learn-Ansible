@@ -47,8 +47,12 @@
       ansible.builtin.debug:
        msg: "{{out}}"
 
-#    - name: Declaring external variable data
-#      ansible.builtin.set_fact:
-#        status: "{{out.rc}}"
+    - name: Declaring external variable data
+      ansible.builtin.set_fact:
+        status: "{{out.rc}}"
+
+    - name: Printing status
+      ansible.builtin.debug:
+        msg: "{{status}}"
 
 
