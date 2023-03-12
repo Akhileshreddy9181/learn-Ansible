@@ -1,0 +1,8 @@
+- name: Play Variables
+  hosts: all
+  vars:
+    demo_var: first_sample_variable
+  tasks:
+    - name: Print sample variable
+      ansible.builtin.debug:
+       msg: demo_var={{ demo_var}}
