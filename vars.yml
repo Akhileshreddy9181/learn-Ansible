@@ -6,3 +6,13 @@
     - name: Print sample variable
       ansible.builtin.debug:
        msg: demo_var={{ demo_var}}
+
+
+- name: Play Variables from file
+  hosts: localhost
+  vars:
+    - variables.yml
+  tasks:
+    -name: Printing vars from file
+    ansible.builtin.debug:
+       msg: file_var={{demo_var_f}}
