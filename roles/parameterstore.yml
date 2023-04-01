@@ -1,0 +1,6 @@
+- name: Fetch and print Parameters
+  hosts: localhost
+  tasks:
+    - name: Print Parameter Value
+      ansible.builtin.debug:
+        msg: "{{ lookup('amazon.aws.aws_ssm', 'test1') }}"
