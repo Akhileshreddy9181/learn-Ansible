@@ -1,5 +1,5 @@
 - name: Loops demo
-  hosts: local
+  hosts: localhost
   tasks:
     - name: Print Fruits
       debug:
