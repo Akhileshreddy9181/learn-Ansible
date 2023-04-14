@@ -1,0 +1,6 @@
+- name: Loops demo
+  hosts: local
+  tasks:
+    - name: Print Fruits
+      debug:
+        msg: Fruit = Apple
